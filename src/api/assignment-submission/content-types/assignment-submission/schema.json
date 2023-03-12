@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assignment_submissions",
+  "info": {
+    "singularName": "assignment-submission",
+    "pluralName": "assignment-submissions",
+    "displayName": "Assignment Submission"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "assignments_issued": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::assignments-issued.assignments-issued"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "assignment_submissions"
+    },
+    "attachment": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "submitted_on": {
+      "type": "datetime"
+    },
+    "marks": {
+      "type": "decimal"
+    }
+  }
+}

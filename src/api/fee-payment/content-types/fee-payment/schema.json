@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fee_payments",
+  "info": {
+    "singularName": "fee-payment",
+    "pluralName": "fee-payments",
+    "displayName": "Fee Collection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "transaction_id": {
+      "type": "string"
+    },
+    "transaction_timestamp": {
+      "type": "datetime"
+    },
+    "payment_method": {
+      "type": "enumeration",
+      "enum": [
+        "Cash",
+        "UPI",
+        "Bank Transfer",
+        "Payment Gateway"
+      ]
+    },
+    "receipt": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

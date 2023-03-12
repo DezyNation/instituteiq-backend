@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "financial_details",
+  "info": {
+    "singularName": "financial-detail",
+    "pluralName": "financial-details",
+    "displayName": "Financial Detail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "esi_number": {
+      "type": "string"
+    },
+    "epf_number": {
+      "type": "string"
+    },
+    "account_number": {
+      "type": "string"
+    },
+    "ifsc": {
+      "type": "string"
+    },
+    "pan": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

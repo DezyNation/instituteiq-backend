@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscription_plans",
+  "info": {
+    "singularName": "subscription-plan",
+    "pluralName": "subscription-plans",
+    "displayName": "Subscription Plan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "periodicity": {
+      "type": "integer"
+    },
+    "periodicity_type": {
+      "type": "enumeration",
+      "enum": [
+        "days",
+        "months",
+        "years"
+      ]
+    },
+    "student_limit": {
+      "type": "biginteger"
+    }
+  }
+}

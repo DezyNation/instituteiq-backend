@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assignments_issueds",
+  "info": {
+    "singularName": "assignments-issued",
+    "pluralName": "assignments-issueds",
+    "displayName": "Assignments Issued",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "teacher": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "assignments_issueds"
+    },
+    "subject": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subject.subject"
+    },
+    "questions": {
+      "type": "richtext"
+    },
+    "due": {
+      "type": "date"
+    },
+    "attachments": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
