@@ -44,6 +44,12 @@
     },
     "plan_purchased_on": {
       "type": "date"
+    },
+    "branches": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::branch.branch",
+      "mappedBy": "institution"
     }
   }
 }
